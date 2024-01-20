@@ -20,6 +20,9 @@ func _physics_process(delta):
 		move_and_slide()
 
 func interactWithClosestEmployee():
+	if employeesInRange.size() == 0:
+		return
+	
 	var closestEmployeeIndex = -1
 	var distance = -1
 	
