@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://w1kipucyncsa"]
+[gd_scene load_steps=6 format=3 uid="uid://w1kipucyncsa"]
 
 [ext_resource type="Texture2D" uid="uid://dbdd0fcm5ngk3" path="res://icon.svg" id="1_dy20c"]
 [ext_resource type="Script" path="res://Scripts/Characters/EmployeeController.gd" id="1_lrbuy"]
+[ext_resource type="PackedScene" uid="uid://bxff5v5qww80n" path="res://Scenes/Components/HappinessIndicator.tscn" id="2_tg67p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4a1g"]
 size = Vector2(115, 112)
@@ -11,6 +12,10 @@ radius = 276.016
 
 [node name="Employee" type="CharacterBody2D"]
 script = ExtResource("1_lrbuy")
+
+[node name="HappinessIndicator" parent="." instance=ExtResource("2_tg67p")]
+position = Vector2(0, -163)
+scale = Vector2(6, 6)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(0, 1, 0.00392157, 1)
