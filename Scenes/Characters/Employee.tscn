@@ -6,8 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4a1g"]
 size = Vector2(115, 112)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5wf0m"]
-radius = 176.284
+[sub_resource type="CircleShape2D" id="CircleShape2D_gvswl"]
+radius = 276.016
 
 [node name="Employee" type="CharacterBody2D"]
 script = ExtResource("1_lrbuy")
@@ -16,9 +16,37 @@ script = ExtResource("1_lrbuy")
 modulate = Color(0, 1, 0.00392157, 1)
 texture = ExtResource("1_dy20c")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="EmployeeCollision" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_p4a1g")
 
-[node name="InteractionRadius" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_5wf0m")
+[node name="InteractionArea" type="Area2D" parent="."]
+
+[node name="InteractionRadius" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CircleShape2D_gvswl")
+
+[node name="InteractPrompt" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -122.0
+offset_right = 20.0
+offset_bottom = -67.0
+theme_override_font_sizes/font_size = 40
+text = "E
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DebugName" type="Label" parent="."]
+offset_left = -138.0
+offset_top = 75.0
+offset_right = 147.0
+offset_bottom = 188.0
+theme_override_font_sizes/font_size = 40
+text = "<DebugName>
+
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="InteractionArea" to="." method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="InteractionArea" to="." method="_on_interaction_area_body_exited"]

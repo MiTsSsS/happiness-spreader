@@ -1,12 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpdui1wvotms0"]
+[gd_scene load_steps=3 format=3 uid="uid://dpdui1wvotms0"]
 
 [ext_resource type="PackedScene" uid="uid://bgq2dn2ws60o" path="res://Scenes/Characters/PlayerCharacter.tscn" id="1_75tf6"]
+[ext_resource type="PackedScene" uid="uid://w1kipucyncsa" path="res://Scenes/Characters/Employee.tscn" id="2_kpe8h"]
 
 [node name="TestScene" type="Node2D"]
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_75tf6")]
 position = Vector2(423, 238)
 
+[node name="Employee" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(240, 195)
+debugName = "Hayawen"
+
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(575, 325)
 zoom = Vector2(0.4, 0.4)
+
+[node name="Employee2" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(480, 390)
+debugName = "Animal"
+
+[node name="Employee3" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(233, 379)
+debugName = "Kaleb"

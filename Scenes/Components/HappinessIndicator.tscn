@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxff5v5qww80n"]
+
+[ext_resource type="Texture2D" uid="uid://dbdd0fcm5ngk3" path="res://icon.svg" id="1_b4c2s"]
+[ext_resource type="Script" path="res://Scripts/Components/HappinessIndicator.gd" id="1_fxrh0"]
+
+[node name="HappinessIndicator" type="Node"]
+script = ExtResource("1_fxrh0")
+
+[node name="Emoji" type="Sprite2D" parent="."]
+texture = ExtResource("1_b4c2s")
