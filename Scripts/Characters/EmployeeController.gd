@@ -10,13 +10,27 @@ enum EmotionalState {
 	HAPPY_NORMAL,
 }
 
+enum EmployeeJob {
+	DEVELOPER,
+	DESIGNER,
+	AUDIO,
+	ARTIST,
+	IT,
+	ACCOUNTING,
+}
+
 #Node Init
 @onready var interactPrompt = $InteractPrompt
 @onready var debugNameLabel = $DebugName
-@onready var happinessIndicatorScript:HappinessIndicator = $HappinessIndicator
 
-#var Init
+#Happiness Properties Init
+@onready var happinessIndicatorScript:HappinessIndicator = $HappinessIndicator
+@onready var happinessLevel = 0
+@onready var maxHappinessLevel = 10
 @onready var emotionalState = EmotionalState.HAPPY_NORMAL
+@onready var employeeJob = EmployeeJob.ACCOUNTING
+@onready var employeeJobPool = [EmployeeJob.DEVELOPER, EmployeeJob.DESIGNER, EmployeeJob.AUDIO, EmployeeJob.ARTIST, EmployeeJob.IT, EmployeeJob.ACCOUNTING]
+@onready var employeeHappinessLevelsPool = [10, 5, 6, 1, 8, 3]
 
 #Debug
 @export var debugName:String
@@ -43,3 +57,19 @@ func interactedWith():
 	happinessIndicatorScript.updateEmoji(randi_range(0, 4))
 	print("PLAYER HAS INTERACTED WITH ")
 	print(debugName)
+
+func updateEmotionalState(level):
+	pass
+	
+#Randomizes Employee's job and happiness level
+func randomizeEmployeeStatus():
+	var randomizedJob = employeeJobPool.pick_random()
+	employeeJob = randomizedJob
+	employeeJobPool.remove(randomizedJob)
+	
+	var randomHappinessLevel = employeeHappinessLevelsPool.pick_random()
+	happinessLevel = randomHappinessLevel
+	employeeHappinessLevelsPool.remove(randomHappinessLevel)
+	
+func resolveHappinessLevel():
+	pass

@@ -23,3 +23,5 @@ debugName = "Animal"
 [node name="Employee3" parent="." instance=ExtResource("2_kpe8h")]
 position = Vector2(233, 379)
 debugName = "Kaleb"
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
