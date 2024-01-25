@@ -1,0 +1,52 @@
+~ firstStory
+
+Game Dev: [[Hi|Hello|Howdy]], this is some dialogue.
+Game Dev: moss neez.
+- First one
+	Game Dev: You picked the first one.
+- Second one
+	Game Dev: You picked the second one.
+- Start again => firstStory
+- End the conversation => END
+Game Dev: For more information see the online documentation.
+
+=> END
+
+~ secondStory
+
+#If I haven't interacted with this employee before, do this
+if GameState.currentEmployeeInDialog.hasInteractedWith == false:
+	if GameState.currentEmployeeInDialog.happinessLevel <= 5:
+	#First Tree
+		Game Dev: [[Goddamnit all|Fuck this shit|Someone one shoot me right now]].
+		- What's going on?
+			Game Dev: Well, the fucking designers can't make their mind up and we're modifying all our systems on a weekly basis, this just sucks!
+			- Jesus christ dude, that's fucked up...
+				Well fuck yea it is, and what's worse, these fucking artists keep importing 4K textures, like what the fuck do they think people have quantum PCs or some shit, I don't get it
+				- Well, I'm glad you're around to make things right!
+					Dude I fucking know right! I don't know what would've happened if I wasn't around!
+					do GameState.setHasFinishedDialogWithEmployee(5)
+					=> END
+				- Looks like this Dev team is what's keeping everyone in check, you love to see it!
+					Ye, me and the bois always on top of everything, we gotta keep everything from falling apart...
+					do GameState.setHasFinishedDialogWithEmployee(3)
+					=> END
+				- Haha! You're probably bad at your job too, so stop dunking on everyone else in here!
+					do GameState.setHasFinishedDialogWithEmployee(-3)
+					=> END
+				
+	
+	else:
+		#Second Tree goes here
+		Game Dev: What a wonderful day!
+		- I'm about to make it worse for ya.
+			Game Dev: What do you mean?
+			- You're getting demoted :D
+			Game Dev: Wha-? [speed=0.1]
+			do GameState.setHasFinishedDialogWithEmployee(-5)
+			=> END
+	
+else:
+	Game Dev: Brother we just talked, scram.
+	
+	=> END

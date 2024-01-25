@@ -10,15 +10,6 @@ enum EmotionalState {
 	HAPPY_NORMAL,
 }
 
-enum EmployeeJob {
-	DEVELOPER,
-	DESIGNER,
-	AUDIO,
-	ARTIST,
-	IT,
-	ACCOUNTING,
-}
-
 #Node Init
 @onready var interactPrompt = $InteractPrompt
 @onready var debugNameLabel = $DebugName
@@ -28,15 +19,18 @@ enum EmployeeJob {
 @onready var happinessLevel = 0
 @onready var maxHappinessLevel = 10
 @onready var emotionalState = EmotionalState.HAPPY_NORMAL
-@onready var employeeJob = EmployeeJob.ACCOUNTING
-@onready var employeeJobPool = [EmployeeJob.DEVELOPER, EmployeeJob.DESIGNER, EmployeeJob.AUDIO, EmployeeJob.ARTIST, EmployeeJob.IT, EmployeeJob.ACCOUNTING]
-@onready var employeeHappinessLevelsPool = [10, 5, 6, 1, 8, 3]
+@onready var employeeJob = EmployeeStatusLoader.EmployeeJob.ACCOUNTING
+
+#Dialog
+@export var dialog:DialogueResource
+@export var dialogStart:String = "start"
+@export var hasInteractedWith = false
 
 #Debug
 @export var debugName:String
 
 func _ready():
-	happinessIndicatorScript.updateEmoji(randi_range(0, 4))
+	randomizeEmployeeStatus()
 	debugNameLabel.text = debugName
 
 #On enter, show the E prompt and add to employees in range
@@ -54,22 +48,41 @@ func _on_interaction_area_body_exited(body):
 		interactPrompt.visible = false
 		
 func interactedWith():
-	happinessIndicatorScript.updateEmoji(randi_range(0, 4))
-	print("PLAYER HAS INTERACTED WITH ")
-	print(debugName)
+	if dialog != null:
+		GameState.currentEmployeeInDialog = self
+		DialogueManager.show_dialogue_balloon(dialog, dialogStart)		
 
 func updateEmotionalState(level):
-	pass
+	happinessLevel += level
+	happinessLevel = clampi(happinessLevel, 0, 10)
+	resolveHappinessLevel()
 	
 #Randomizes Employee's job and happiness level
 func randomizeEmployeeStatus():
-	var randomizedJob = employeeJobPool.pick_random()
+	var randomizedJob = EmployeeStatusLoader.employeeJobPool.pick_random()
 	employeeJob = randomizedJob
-	employeeJobPool.remove(randomizedJob)
+	EmployeeStatusLoader.employeeJobPool.remove_at(EmployeeStatusLoader.employeeJobPool.find(employeeJob))
 	
-	var randomHappinessLevel = employeeHappinessLevelsPool.pick_random()
+	var randomHappinessLevel = EmployeeStatusLoader.employeeHappinessLevelsPool.pick_random()
 	happinessLevel = randomHappinessLevel
-	employeeHappinessLevelsPool.remove(randomHappinessLevel)
+	EmployeeStatusLoader.employeeHappinessLevelsPool.remove_at(EmployeeStatusLoader.employeeHappinessLevelsPool.find(happinessLevel))
+	#$HappinessLevel.text =  happinessLevel.to_string()
+	
+	resolveHappinessLevel()
 	
 func resolveHappinessLevel():
-	pass
+	if happinessLevel >= 9:
+		emotionalState = EmotionalState.HAPPY_HEARTEYES_KISS
+		happinessIndicatorScript.updateEmoji(4)
+	elif happinessLevel >= 7 and happinessLevel < 9:
+		emotionalState = EmotionalState.HAPPY_HEARTEYES_KISS
+		happinessIndicatorScript.updateEmoji(0)
+	elif happinessLevel >= 5 and happinessLevel < 7:
+		emotionalState = EmotionalState.CONFUSED
+		happinessIndicatorScript.updateEmoji(1)
+	elif happinessLevel >= 3 and happinessLevel < 5:
+		emotionalState = EmotionalState.ANGRY
+		happinessIndicatorScript.updateEmoji(2)
+	elif happinessLevel >= 1 and happinessLevel < 3:
+		emotionalState = EmotionalState.ANGRY_SAD_CRY
+		happinessIndicatorScript.updateEmoji(3)
