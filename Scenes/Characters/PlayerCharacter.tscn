@@ -1,20 +1,20 @@
 [gd_scene load_steps=4 format=3 uid="uid://bgq2dn2ws60o"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/PlayerController.gd" id="1_kkvfq"]
-[ext_resource type="Texture2D" uid="uid://dbdd0fcm5ngk3" path="res://icon.svg" id="1_ug2m0"]
+[ext_resource type="Texture2D" uid="uid://dax186k3k30gt" path="res://Art/Characters/player.png" id="2_unjth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3a8po"]
-size = Vector2(115, 115)
+size = Vector2(25.25, 50)
 
 [node name="PlayerCharacter" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_kkvfq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ug2m0")
+texture = ExtResource("2_unjth")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 0)
+position = Vector2(-1, -4)
 shape = SubResource("RectangleShape2D_3a8po")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.05, 1.05)
+zoom = Vector2(1.875, 1.875)

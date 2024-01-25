@@ -1,16 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://dpdui1wvotms0"]
 
 [ext_resource type="PackedScene" uid="uid://bgq2dn2ws60o" path="res://Scenes/Characters/PlayerCharacter.tscn" id="1_75tf6"]
+[ext_resource type="Texture2D" uid="uid://5ffq4if671bt" path="res://Art/Office/Office.png" id="1_lk4kn"]
 [ext_resource type="PackedScene" uid="uid://w1kipucyncsa" path="res://Scenes/Characters/Employee.tscn" id="2_kpe8h"]
 [ext_resource type="Resource" uid="uid://bjuh1eevdcuc4" path="res://Dialog/Dev_dialog_1.dialogue" id="3_ih058"]
-[ext_resource type="Texture2D" uid="uid://c8514h4nheu4j" path="res://Art/Office/LargePixelOffice.png" id="4_wxlt6"]
 
 [node name="TestScene" type="Node2D"]
 
-[node name="LargePixelOffice" type="Sprite2D" parent="."]
-position = Vector2(901, 426)
-scale = Vector2(2.00879, 1.46094)
-texture = ExtResource("4_wxlt6")
+[node name="Office" type="Sprite2D" parent="."]
+position = Vector2(961, 536.5)
+scale = Vector2(7.48438, 4.20703)
+texture = ExtResource("1_lk4kn")
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_75tf6")]
 position = Vector2(806, 381)
@@ -32,5 +32,3 @@ debugName = "Animal"
 [node name="Employee3" parent="." instance=ExtResource("2_kpe8h")]
 position = Vector2(288, 241)
 debugName = "Kaleb"
-
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
