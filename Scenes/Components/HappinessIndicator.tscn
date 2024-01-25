@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://bxff5v5qww80n"]
 
-[ext_resource type="Texture2D" uid="uid://dbdd0fcm5ngk3" path="res://icon.svg" id="1_b4c2s"]
 [ext_resource type="Script" path="res://Scripts/Components/HappinessIndicator.gd" id="1_fxrh0"]
+[ext_resource type="Texture2D" uid="uid://2m1wy0t6r6g4" path="res://Art/Icons/Emojis/Confused.png" id="2_h2v4t"]
 
-[node name="HappinessIndicator" type="Node"]
+[node name="HappinessIndicator" type="Node2D"]
 script = ExtResource("1_fxrh0")
 
 [node name="Emoji" type="Sprite2D" parent="."]
-texture = ExtResource("1_b4c2s")
+texture = ExtResource("2_h2v4t")

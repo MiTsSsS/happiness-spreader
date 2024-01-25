@@ -2,12 +2,14 @@ extends CharacterBody2D
 
 class_name Player
 
+@onready var isInDialog = false
+
 @export var speed = 550
 
-var target = position
+var target = global_position
 var employeesInRange = []
 
-func _input(event):
+func _unhandled_input(event):
 	if event.is_action_pressed("click"):
 		target = get_global_mouse_position()
 	if event.is_action_pressed("interact"):
@@ -39,4 +41,4 @@ func interactWithClosestEmployee():
 	
 	var closestEmployee:Employee = employeesInRange[closestEmployeeIndex]
 	closestEmployee.interactedWith()
-		
+	target = position
