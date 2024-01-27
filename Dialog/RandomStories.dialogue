@@ -1,0 +1,51 @@
+~ firstStory
+
+Sindbad: Well where do I start? On my way here I bumped another car on the road, to be fair it was my fault cause I was trying to speed my way to work! Damn kids won't let me have a good night of sleep! I just wish we had more than 24 hours in a day..
+- How about we don't blame kids for your misbehavior and lack of attention? 
+	do GameState.setHasFinishedDialogWithEmployee(-3)
+	=> END
+- Well next time just ring me up and I'll give you a helicopter lift! Ha ha ha ha
+	do GameState.setHasFinishedDialogWithEmployee(3)
+	=> END
+- I see, I had the same situation when I had my newborns, it was horrible man!
+	do GameState.setHasFinishedDialogWithEmployee(1)
+	=> END
+	
+~ secondStory
+
+Dwayne: Are you like a spy or something? Meh, what the hell.. My partner is cheating on me okay? Is that what you wanted to hear? I try to keep a smile up from time to time but.. It's just heartbreaking..
+- Oh.. I'm so sorry to hear that.. Would you like to grab a drink after work to blow off some steam?
+	do GameState.setHasFinishedDialogWithEmployee(3)
+	=> END
+- Damn.. Is the new partner better looking than you..?
+	do GameState.setHasFinishedDialogWithEmployee(-4)
+	=> END
+- That's life.. What can you do?
+	do GameState.setHasFinishedDialogWithEmployee(-1)
+	=> END
+
+~ thirdStory
+
+John: Honestly, the people here are pretty chill, it's just I can't deal with that guy on lunch break, the way he chews makes me want to go on a killing rampage!!! I have literally stopped going to the lunch break room and I just go eat alone outside. It's driving me crazy!!
+- Isn't that the most annoying thing in the world.. A loud chewer!! Haha. Let's go beat him up.
+	do GameState.setHasFinishedDialogWithEmployee(3)
+	=> END
+- Why don't you ask them nicely to chew with their mouth closed?
+	do GameState.setHasFinishedDialogWithEmployee(-2)
+	=> END
+- I have a great idea, sit right next to them and chew like a pig! That'd teach them a lesson!
+	do GameState.setHasFinishedDialogWithEmployee(1)
+	=> END
+
+~ fourthStory
+
+Iceberge: The food SUCKS!! I have asked multiple times for like... You know? the RIGHT food to be served.. VEGAN FOOD! but like.. no one seems to care about me or what I want!!
+- Yeahh.. You are most definitely right, how can they ignore someone like YOU?... Free the animals?! I guess hehe
+	do GameState.setHasFinishedDialogWithEmployee(3)
+	=> END
+- *Take out my triple-meat sandwich and feast on it
+	do GameState.setHasFinishedDialogWithEmployee(-5)
+	=> END
+- How could they?!.. Could they look an animal in the eyes and say to it - 'My appetite is more important than your suffering'?
+	do GameState.setHasFinishedDialogWithEmployee(1)
+	=> END

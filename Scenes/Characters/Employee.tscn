@@ -18,7 +18,6 @@ position = Vector2(0, -163)
 scale = Vector2(6, 6)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0, 1, 0.00392157, 1)
 position = Vector2(-0.999998, -0.499998)
 scale = Vector2(1.78125, 1.76563)
 texture = ExtResource("3_763h1")
@@ -39,18 +38,6 @@ offset_right = 20.0
 offset_bottom = -67.0
 theme_override_font_sizes/font_size = 40
 text = "E
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DebugName" type="Label" parent="."]
-offset_left = -138.0
-offset_top = 75.0
-offset_right = 147.0
-offset_bottom = 188.0
-theme_override_font_sizes/font_size = 40
-text = "<DebugName>
-
 "
 horizontal_alignment = 1
 vertical_alignment = 1

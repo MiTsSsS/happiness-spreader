@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://pv4ga61jqndg"
+path="res://.godot/imported/RandomStories.dialogue-e6dc05b3a3c5e3665ca938c3a5c62478.tres"
+
+[deps]
+
+source_file="res://Dialog/RandomStories.dialogue"
+dest_files=["res://.godot/imported/RandomStories.dialogue-e6dc05b3a3c5e3665ca938c3a5c62478.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,25 @@
+~ firstStory
+
+Itmitri: Everyone assumes we just unplug and plug the router cable to make magic.. They think they're much better than the "computer people"! :) Little do they know with one press of a button we can make this company CRUMBLE!!
+- Easy there my friend! I am here to fix things and make them better, not to destroy the company and lose a client! hehe
+	do GameState.setHasFinishedDialogWithEmployee(-1)
+	=> END
+- This is something that most big companies face nowadays, would you like me to funnel this through HR so they could try to fix this?
+	do GameState.setHasFinishedDialogWithEmployee(1)
+	=> END
+- *whispering* Unplug everything, show them who's boss. 
+	do GameState.setHasFinishedDialogWithEmployee(4)
+	=> END
+		
+~ secondStory
+
+Chad: I don't invest in regular money anymore. It's so last century. My portfolio is basically a spaceship on its way to the moon, fueled by blockchain dreams and a sprinkle of stardust. Sadly, my partner left me because I sold their car that they drive to work to buy more bitcoin, they don't know that I'll buy them 3 ferraris in a year dude!!
+- Good riddance! With the money you'll be making, you can get someone much better! Now let's finish the day and go to the bar, you're inviting me.
+	do GameState.setHasFinishedDialogWithEmployee(3)
+	=> END
+- You broke their trust by selling their car without their knowledge! How could you? Now let's try to fix that marriage of yours, I'm sure you can get your partner back.
+	do GameState.setHasFinishedDialogWithEmployee(-2)
+	=> END
+- Daaaamn, you know I invest heavily in crypto too? My salary? Straight to crypto, can't wait to ride the bull market like a rodeo!
+	do GameState.setHasFinishedDialogWithEmployee(1)
+	=> END

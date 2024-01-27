@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://b7bnesfxg6gie"
+path="res://.godot/imported/HR_Dialog.dialogue-ecceced9739e3d1cb79d4c2aca40d561.tres"
+
+[deps]
+
+source_file="res://Dialog/HR_Dialog.dialogue"
+dest_files=["res://.godot/imported/HR_Dialog.dialogue-ecceced9739e3d1cb79d4c2aca40d561.tres"]
+
+[params]
+
+defaults=true

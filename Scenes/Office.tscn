@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://cag5rs02volee"]
+
+[ext_resource type="Texture2D" uid="uid://5ffq4if671bt" path="res://Art/Office/Office.png" id="1_02gmi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_avmxu"]
+resource_local_to_scene = true
+radius = 12.0416
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lama8"]
+resource_local_to_scene = true
+size = Vector2(1.25, 24)
+
+[node name="Office" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_02gmi")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(41, 28)
+shape = SubResource("CircleShape2D_avmxu")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(3, 46)
+shape = SubResource("CircleShape2D_avmxu")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(9, -2)
+shape = SubResource("CircleShape2D_avmxu")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(36, 71)
+shape = SubResource("CircleShape2D_avmxu")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2(-17, 72)
+shape = SubResource("RectangleShape2D_lama8")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2(-17.5, 109)
+shape = SubResource("RectangleShape2D_lama8")

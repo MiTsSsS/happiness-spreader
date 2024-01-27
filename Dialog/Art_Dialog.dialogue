@@ -1,0 +1,25 @@
+~ firstStory
+
+Berik: I don't know if I can handle this much longer. We work so hard to finish the required characters and scenes, and AS SOON AS WE FINISH THEY WANT TO CHANGE ALL OF IT!! All the hard work.. POOF! Gone.
+- That's the reality of work in the game dev world my friend. You just have to endure and be proud of your work!
+	do GameState.setHasFinishedDialogWithEmployee(3)
+	=> END
+- Next time this happens, throw a fit and threaten to quit. That'll teach them.
+	do GameState.setHasFinishedDialogWithEmployee(-2)
+	=> END
+- Just let the AI do it lol...
+	do GameState.setHasFinishedDialogWithEmployee(-5)
+	=> END
+
+~ secondStory
+
+Becky: This place lacks inspiration and motivation.. How am I supposed to make beautiful art when I'm surrounded by 4 ugly walls?
+- Yea how stupid of them to just rent a normal place for a company. Next time they should rent a bungalow near a waterfall!
+	do GameState.setHasFinishedDialogWithEmployee(-2)
+	=> END
+- You know what I do for inspiration on my way to work? ROAD RAAAGGGEEE
+	do GameState.setHasFinishedDialogWithEmployee(0)
+	=> END
+- How about we decorate this room a little bit? Put some nice posters to keep it fresh.
+	do GameState.setHasFinishedDialogWithEmployee(2)
+	=> END

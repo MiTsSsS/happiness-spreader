@@ -46,4 +46,4 @@ interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Dialog/Dev_dialog_1.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Dialog/RandomStories.dialogue", "res://Dialog/IT_Dialog.dialogue", "res://Dialog/HR_Dialog.dialogue", "res://Dialog/Art_Dialog.dialogue", "res://Dialog/Design_Dialog.dialogue", "res://Dialog/Dev_dialog.dialogue", "res://Dialog/CommonGreeting_Dialog.dialogue")

@@ -1,0 +1,25 @@
+~ firstStory
+   
+ Hudson: There's this dude in the dev team that wants us to make the game as simple as possible so he doesn't work more than 2 hours a day, screams nepotism to me... If you know what I mean.
+- Hey hey, let's not start accusing people of random stuff alright?
+	do GameState.setHasFinishedDialogWithEmployee(-3)
+	=> END
+- I know right? That guy seemed very suss...
+	do GameState.setHasFinishedDialogWithEmployee(3)
+	=> END
+- Nothing that a small prank won't solve. Jello keyboard anyone?
+	do GameState.setHasFinishedDialogWithEmployee(1)
+	=> END
+	
+~ secondStory
+
+Carmack: Listen sir, I come here with the best ideas in the world, but my boss shuts me down every single time. I think they are jealous of my ingenious innovation. I should quit and apply to some AAA company, I'll be INSTANTLY hired.
+- I'm sure you will.. Should I walk you to HR and guide you through quitting this job?
+	do GameState.setHasFinishedDialogWithEmployee(-3)
+	=> END
+- You just need to find a way to connect with your boss, tone down your ideas and try to deliver them in a better way, I'm sure they will listen.
+	do GameState.setHasFinishedDialogWithEmployee(3)
+	=> END
+- Make your own game and show them how stupid they were.
+	do GameState.setHasFinishedDialogWithEmployee(2)
+	=> END
