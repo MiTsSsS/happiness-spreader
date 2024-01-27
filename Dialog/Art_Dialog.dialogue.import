@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://flnykmia3g6b"
+path="res://.godot/imported/Art_Dialog.dialogue-15fe8a0af6aac08e9c56b467f33137d9.tres"
+
+[deps]
+
+source_file="res://Dialog/Art_Dialog.dialogue"
+dest_files=["res://.godot/imported/Art_Dialog.dialogue-15fe8a0af6aac08e9c56b467f33137d9.tres"]
+
+[params]
+
+defaults=true

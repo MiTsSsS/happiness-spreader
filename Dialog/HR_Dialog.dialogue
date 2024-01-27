@@ -1,0 +1,25 @@
+~ firstStory
+
+Mila: These Gen Z employees... I just can't take them anymore. You know we had someone hired in this department and they started using emojis and slangs in professional emails? HOW IS THIS ALLOWED? And who the hell is YEET and why are we trying to slay him?? I just don't get it.
+- Hahahahahahahahahahahahahaha..
+	do GameState.setHasFinishedDialogWithEmployee(1)
+	=> END
+- Why don't you talk to the head of HR to send a company wide email to address this issue? No more slangs and no more YEETing.
+	do GameState.setHasFinishedDialogWithEmployee(-1)
+	=> END
+- Tell me about it! My kids come home daily with new words that have absolutely no meaning! Though, I do understand most of them now and I can help you communicate.
+	do GameState.setHasFinishedDialogWithEmployee(3)
+	=> END
+
+~ secondStory
+
+Karen: Sometime I just feel like firing everyone and burning this company to the ground!! Hehe just kidding, I love my job!
+- *Get up slowly and call the police*
+	do GameState.setHasFinishedDialogWithEmployee(-5)
+	=> END
+- You seem like a nice person, but maybe HR is not for you? Tell me about your education and experience and we can find you something else.
+	do GameState.setHasFinishedDialogWithEmployee(1)
+	=> END
+- You know? I have a great way to get your anger out, let's go to a nearby Rage Room and you'll feel much better afterwards.
+	do GameState.setHasFinishedDialogWithEmployee(4)
+	=> END

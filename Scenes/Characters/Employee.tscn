@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://w1kipucyncsa"]
 
-[ext_resource type="Texture2D" uid="uid://dbdd0fcm5ngk3" path="res://icon.svg" id="1_dy20c"]
 [ext_resource type="Script" path="res://Scripts/Characters/EmployeeController.gd" id="1_lrbuy"]
 [ext_resource type="PackedScene" uid="uid://bxff5v5qww80n" path="res://Scenes/Components/HappinessIndicator.tscn" id="2_tg67p"]
+[ext_resource type="Texture2D" uid="uid://bwwltlwgdk886" path="res://Art/Characters/Employee.png" id="3_763h1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p4a1g"]
 size = Vector2(115, 112)
@@ -18,8 +18,9 @@ position = Vector2(0, -163)
 scale = Vector2(6, 6)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0, 1, 0.00392157, 1)
-texture = ExtResource("1_dy20c")
+position = Vector2(-0.999998, -0.499998)
+scale = Vector2(1.78125, 1.76563)
+texture = ExtResource("3_763h1")
 
 [node name="EmployeeCollision" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)
@@ -37,18 +38,6 @@ offset_right = 20.0
 offset_bottom = -67.0
 theme_override_font_sizes/font_size = 40
 text = "E
-"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DebugName" type="Label" parent="."]
-offset_left = -138.0
-offset_top = 75.0
-offset_right = 147.0
-offset_bottom = 188.0
-theme_override_font_sizes/font_size = 40
-text = "<DebugName>
-
 "
 horizontal_alignment = 1
 vertical_alignment = 1

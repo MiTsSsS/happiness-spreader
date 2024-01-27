@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c4y67jb3v41sc"
+path="res://.godot/imported/CommonGreeting_Dialog.dialogue-cf853f41286bf566868cc226e9a2021e.tres"
+
+[deps]
+
+source_file="res://Dialog/CommonGreeting_Dialog.dialogue"
+dest_files=["res://.godot/imported/CommonGreeting_Dialog.dialogue-cf853f41286bf566868cc226e9a2021e.tres"]
+
+[params]
+
+defaults=true

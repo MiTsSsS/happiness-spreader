@@ -1,0 +1,25 @@
+~ firstStory
+
+Classico: I spent the whole damn day looking for the bug, turns out it's just the wrong BOOLEAN initialization!! How do I tell my boss that a whole work day was lost cause I'm stupid?
+- You don't. Just lie about it.
+	do GameState.setHasFinishedDialogWithEmployee(1)
+	=> END
+- Shit happens. Cheer up and compensate it tomorrow. Believe in yourself!
+	do GameState.setHasFinishedDialogWithEmployee(3)
+	=> END
+- Who the hell fucks up an initialization?! You're fired.
+	do GameState.setHasFinishedDialogWithEmployee(-5)
+	=> END
+
+~ secondStory
+
+Jaman: These designers have no idea about limitations! They think we have quantum computers in our disposal. I'm so tired of explaining it day after day.
+- Just buy a quantum computer...
+	do GameState.setHasFinishedDialogWithEmployee(-3)
+	=> END
+- A simple conversation is always the way to be on the same wave with your coworkers.
+	do GameState.setHasFinishedDialogWithEmployee(1)
+	=> END
+- You're smarter than these people, just ignore it and do your job.
+	do GameState.setHasFinishedDialogWithEmployee(3)
+	=> END

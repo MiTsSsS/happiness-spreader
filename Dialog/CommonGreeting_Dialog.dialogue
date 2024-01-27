@@ -1,0 +1,24 @@
+~ happy
+
+You : [[Hey there! How are we doing today?|Always nice to be greeted with a smile! How are you friend?]]
+Employee: [[Hey there! Welcome to our happy corner of the office! We're always thrilled to see new faces. What brings you here today? Need a boost, or just looking to join the positive vibes? Either way, you're in for a treat!| It's an amazing day to be alive! Why wouldn't we be happy!]]
+You: That is great to hear! Now, I would love to know more about your experience in this company.
+do GameState.endedGreetingDialog()
+=> END
+
+
+~ normal
+
+You : [[Hey there! How are we doing today?|Greetings! How are we feeling today?]]
+Employee: [[Oh, hi! New face, right? If you're here for info or just want to blend into the office hum, feel free to make yourself at home.|Hello! Things are alright, slow start of the day I guess.]]
+You: Tell me more about your experience in this company.
+do GameState.endedGreetingDialog()
+=> END
+
+~ sad
+
+You: [[Hey there! How are we doing today?|Greetings! How are we feeling today?]]
+Employee: [[Hey... I guess. Today's been a bit of a struggle, you know? If you're the harbinger of better vibes, that would be welcomed. Just so you know, it's a bit dim around here lately, so step carefully through the clouds.|Can't you see that I'm busy? What do you want?]]
+You: Oh.. Well, I'm here to improve your experience at this company, do tell me what's making you upset.
+do GameState.endedGreetingDialog()
+=> END

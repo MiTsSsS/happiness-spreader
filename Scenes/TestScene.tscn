@@ -1,36 +1,154 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpdui1wvotms0"]
+[gd_scene load_steps=7 format=3 uid="uid://dpdui1wvotms0"]
 
+[ext_resource type="PackedScene" uid="uid://cag5rs02volee" path="res://Scenes/Office.tscn" id="1_65xm5"]
 [ext_resource type="PackedScene" uid="uid://bgq2dn2ws60o" path="res://Scenes/Characters/PlayerCharacter.tscn" id="1_75tf6"]
 [ext_resource type="PackedScene" uid="uid://w1kipucyncsa" path="res://Scenes/Characters/Employee.tscn" id="2_kpe8h"]
-[ext_resource type="Resource" uid="uid://bjuh1eevdcuc4" path="res://Dialog/Dev_dialog_1.dialogue" id="3_ih058"]
-[ext_resource type="Texture2D" uid="uid://c8514h4nheu4j" path="res://Art/Office/LargePixelOffice.png" id="4_wxlt6"]
+[ext_resource type="Script" path="res://Scripts/Singletons/GameState.gd" id="5_6py2o"]
+[ext_resource type="Script" path="res://Scripts/Singletons/UiManager.gd" id="5_ae52t"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rlbw1"]
+font_size = 32
 
 [node name="TestScene" type="Node2D"]
 
-[node name="LargePixelOffice" type="Sprite2D" parent="."]
-position = Vector2(901, 426)
-scale = Vector2(2.00879, 1.46094)
-texture = ExtResource("4_wxlt6")
+[node name="Office" parent="." instance=ExtResource("1_65xm5")]
+position = Vector2(2.31992, 88.2869)
+scale = Vector2(11.9999, 7.68475)
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_75tf6")]
-position = Vector2(806, 381)
-
-[node name="Employee" parent="." instance=ExtResource("2_kpe8h")]
-position = Vector2(240, 971)
-dialog = ExtResource("3_ih058")
-dialogStart = "secondStory"
-debugName = "Hayawen"
+position = Vector2(217, 968)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(575, 325)
 zoom = Vector2(0.4, 0.4)
 
-[node name="Employee2" parent="." instance=ExtResource("2_kpe8h")]
-position = Vector2(1391, 154)
+[node name="IT" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(192, -642)
+employeeJob = 3
+dialogStart = "secondStory"
+debugName = "Hayawen"
+
+[node name="IT1" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(11, -431)
+employeeJob = 3
 debugName = "Animal"
 
-[node name="Employee3" parent="." instance=ExtResource("2_kpe8h")]
-position = Vector2(288, 241)
+[node name="IT2" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(466, -464)
+employeeJob = 3
+shouldReceiveDialog = true
 debugName = "Kaleb"
 
-[node name="CanvasGroup" type="CanvasGroup" parent="."]
+[node name="DEV" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(-848, -613)
+employeeJob = 0
+dialogStart = "secondStory"
+debugName = "Hayawen"
+
+[node name="DEV1" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(-1029, -439)
+employeeJob = 0
+shouldReceiveDialog = true
+debugName = "Animal"
+
+[node name="DEV2" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(-574, -472)
+employeeJob = 0
+debugName = "Kaleb"
+
+[node name="ART" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(1051, -623)
+employeeJob = 2
+dialogStart = "secondStory"
+debugName = "Hayawen"
+
+[node name="ART1" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(870, -449)
+employeeJob = 2
+debugName = "Animal"
+
+[node name="ART2" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(1325, -482)
+employeeJob = 2
+shouldReceiveDialog = true
+debugName = "Kaleb"
+
+[node name="DESIGN" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(1024, 106)
+employeeJob = 1
+dialogStart = "secondStory"
+debugName = "Hayawen"
+
+[node name="DESIGN1" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(843, 280)
+employeeJob = 1
+debugName = "Animal"
+
+[node name="DESIGN2" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(1298, 247)
+employeeJob = 1
+shouldReceiveDialog = true
+debugName = "Kaleb"
+
+[node name="HR" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(-887, 655)
+dialogStart = "secondStory"
+debugName = "Hayawen"
+
+[node name="HR1" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(-1068, 829)
+debugName = "Animal"
+
+[node name="HR2" parent="." instance=ExtResource("2_kpe8h")]
+position = Vector2(-613, 796)
+shouldReceiveDialog = true
+dialogStart = "secondStory"
+debugName = "Kaleb"
+
+[node name="GameState" type="Node" parent="."]
+script = ExtResource("5_6py2o")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("5_ae52t")
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer"]
+offset_left = 1587.0
+offset_top = 15.0
+offset_right = 1898.0
+offset_bottom = 91.0
+
+[node name="Label" type="Label" parent="CanvasLayer/GridContainer"]
+layout_mode = 2
+text = "Company Happiness"
+label_settings = SubResource("LabelSettings_rlbw1")
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/GridContainer"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_vertical = 4
+max_value = 50.0
+value = 50.0
+
+[node name="End" type="GridContainer" parent="CanvasLayer"]
+offset_left = 302.0
+offset_top = 112.0
+offset_right = 1614.0
+offset_bottom = 886.0
+columns = 2
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/End"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="CanvasLayer/End"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "
+"
+label_settings = SubResource("LabelSettings_rlbw1")
+vertical_alignment = 1
+autowrap_mode = 2
